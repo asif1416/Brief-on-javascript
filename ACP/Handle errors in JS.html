@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2>JavaScript Error Handling and Arrow Function</h2>
+  <p>This example demonstrates how to use <b>catch</b> to display an error.</p>
+  <p id="result"></p>
+  <script>
+    const divide = (a, b) => {
+      if (b === 0) {
+        throw new Error("Division by zero is not allowed");
+      }
+      return a / b;
+    };
+
+    try {
+      document.getElementById("result").innerHTML = "Division result: " + divide(10, 0);
+    } catch (err) {
+      document.getElementById("result").innerHTML = "Error: " + err.message;
+    }
+  </script>
+</body>
+
+</html>

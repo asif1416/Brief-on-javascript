@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p>The String() method can convert a number to a string.</p>
+
+  <p id="number"></p>
+  <p id="string"></p>
+
+  <script>
+    var x = 100;;
+    var y = 200;
+    document.getElementById("number").innerHTML = x + y;
+    document.getElementById("string").innerHTML = String(x) + String(y);
+
+  </script>
+</body>
+
+</html>

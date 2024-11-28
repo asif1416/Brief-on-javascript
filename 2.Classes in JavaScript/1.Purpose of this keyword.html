@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2>This Keyword </h2>
+
+  <p id="object_value"></p>
+  <p id="function_value"></p>
+  <script>
+    var person = {
+      firstName: "Asraful",
+      lastName: "Asif",
+      id: 2247898,
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    function myFunction() {
+      return this;
+    }
+    document.getElementById("object_value").innerHTML = person.fullName();
+    document.getElementById("function_value").innerHTML = myFunction();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+  <body>
+    <h2>JavaScript Class: Students</h2>
+    <p>Creating student objects with names, birth years, and calculating their ages.</p>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <script>
+      class Student {
+        constructor(name, yearOfBirth) {
+          this.name = name;
+          this.yearOfBirth = yearOfBirth; 
+        }
+
+        age() {
+          const currentYear = new Date().getFullYear();
+          return currentYear - this.yearOfBirth;
+        }
+      }
+
+      const student1 = new Student("Asif", 2014);
+      const student2 = new Student("Lisa", 2018);
+
+      document.getElementById("student1").innerHTML = `
+        My name is ${student1.name}. I was born in ${student1.yearOfBirth}. I am currently ${student1.age()} years old.
+      `;
+
+      document.getElementById("student2").innerHTML = `
+        My name is ${student2.name}. I was born in ${student2.yearOfBirth}. I am currently ${student2.age()} years old.
+      `;
+    </script>
+  </body>
+
+</html>

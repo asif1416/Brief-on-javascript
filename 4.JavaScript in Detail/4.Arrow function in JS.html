@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2>JavaScript Arrow Function</h2>
+  <p>This example shows an Arrow Function with multiple parameters.</p>
+  <p id="result"></p>
+  <p id="multiply_result"></p>
+  <script>
+    const add = (a, b) => a + b;
+    document.getElementById("result").innerHTML = "Addition result: " + add(4, 6);
+
+    const multiply = (a, b) => a * b;
+    document.getElementById("multiply_result").innerHTML = "Multiplication result: " + multiply(4, 6);
+  </script>
+</body>
+
+</html>

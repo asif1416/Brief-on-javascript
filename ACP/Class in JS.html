@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>document</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2>JavaScript Class Inheritance: Enrolled Students</h2>
+  <p id="student1_info"></p>
+  <p id="student2_info"></p>
+  <script>
+    class Student {
+      constructor(name, email) {
+        this.name = name;
+        this.email = email;
+      }
+
+      getInfo() {
+        return `Name: ${this.name}, Email: ${this.email}`;
+      }
+    }
+
+    class EnrolledStudent extends Student {
+      constructor(name, email, course) {
+        super(name, email);
+        this.course = course;
+        this.enrolled = true;
+      }
+
+      getEnrollmentDetails() {
+        return `${this.getInfo()} - Enrolled in: ${this.course}`;
+      }
+    }
+
+    const student1 = new Student("John Doe", "johndoe@example.com");
+    const student2 = new EnrolledStudent("Jane Smith", "janesmith@example.com", "Web Development");
+
+    document.getElementById("student1_info").innerHTML = student1.getInfo();
+    document.getElementById("student2_info").innerHTML = student2.getEnrollmentDetails();
+  </script>
+</body>
+
+</html>
